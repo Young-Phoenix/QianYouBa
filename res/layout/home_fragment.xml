@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@color/white"
+                android:orientation="vertical">
+
+    <RadioGroup android:id="@id/rg_view_point"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="#F8F8FF"
+                android:orientation="horizontal">
+        <RadioButton
+                android:id="@id/rb_our_view"
+                style="@style/tabmenu"
+                android:background="@drawable/radio_bg_selector"
+                android:text="@string/our_view"/>
+        <RadioButton
+                android:id="@id/rb_other_view"
+                style="@style/tabmenu"
+                android:background="@drawable/radio_bg_selector"
+                android:text="@string/other_view"/>
+    </RadioGroup>
+
+    <com.handmark.pulltorefresh.library.PullToRefreshListView
+            xmlns:ptr="http://schemas.android.com/apk/res-auto"
+            android:id="@id/p2rlv_home"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:divider="@color/white"
+            android:dividerHeight="5dp"
+            android:layout_below="@id/rg_view_point"
+            ptr:ptrDrawable="@drawable/default_ptr_flip"
+            ptr:ptrAnimationStyle="flip"
+            ptr:ptrHeaderBackground="#383838"
+            ptr:ptrHeaderTextColor="#FFFFFF"/>
+    <ImageView
+            android:id="@id/loading_anim"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:background="@drawable/loading_anim"/>
+    <TextView android:id="@id/load_failed"
+              android:layout_width="wrap_content"
+              android:layout_height="wrap_content"
+              android:text="@string/load_failed"
+              android:visibility="gone"
+              android:layout_centerInParent="true"/>
+</RelativeLayout>

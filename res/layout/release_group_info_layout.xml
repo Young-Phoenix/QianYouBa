@@ -1,0 +1,242 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@id/rl_content"
+    style="@style/match_parent"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="@color/white"
+    android:fadingEdge="none"
+    android:overScrollMode="always"
+    android:scrollbars="none" >
+
+    <include
+        android:id="@+id/release_group_title"
+        layout="@layout/custom_title_other" />
+
+    <ScrollView
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/release_group_title"
+        android:paddingBottom="50.0dip"
+        android:scrollbars="none" >
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="@dimen/rl_size_30px" >
+
+            <LinearLayout
+                android:id="@id/ll_time_content"
+                style="@style/req_item_style"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="0.0dip"
+                android:orientation="vertical" >
+
+                <TextView
+                    android:id="@+id/tv_time_title"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:text="开始时间"
+                    android:textColor="@color/title_color"
+                    android:textSize="@dimen/text_size_mid_36pt" />
+
+                <EditText
+                    android:id="@id/et_time"
+                    style="@style/req_item_content_style"
+                    android:layout_width="fill_parent"
+                    android:focusable="false"
+                    android:hint="旅游的开始时间"
+                    android:textColor="@color/assist_color"
+                    android:textColorHint="@color/tip_color"
+                    android:textSize="@dimen/text_size_small_28pt" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@id/ll_person_content"
+                style="@style/req_item_style"
+                android:orientation="vertical" >
+
+                <TextView
+                    android:id="@id/tv_person_title"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:text="成团人数"
+                    android:textColor="@color/title_color"
+                    android:textSize="@dimen/text_size_mid_36pt" />
+
+                <TextView
+                    android:id="@id/tv_person"
+                    style="@style/req_item_content_style"
+                    android:hint="请输入成团人数"
+                    android:inputType="number"
+                    android:textColor="@color/assist_color"
+                    android:textColorHint="@color/tip_color"
+                    android:textSize="@dimen/text_size_small_28pt" />
+            </LinearLayout>
+
+            <LinearLayout
+                style="@style/req_item_style"
+                android:orientation="vertical" >
+
+                <TextView
+                    android:id="@id/tv_duration_title"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:text="游玩天数"
+                    android:textColor="@color/title_color"
+                    android:textSize="@dimen/text_size_mid_36pt" />
+
+                <EditText
+                    android:id="@id/tv_duration"
+                    style="@style/req_item_content_style"
+                    android:hint="请填写游玩天数"
+                    android:inputType="number"
+                    android:textColor="@color/assist_color"
+                    android:textColorHint="@color/tip_color"
+                    android:textSize="@dimen/text_size_small_28pt" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@id/ll_service_content"
+                style="@style/match_parent"
+                android:layout_marginTop="@dimen/rl_size_20px"
+                android:orientation="vertical" >
+
+                <RelativeLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content" >
+
+                    <TextView
+                        android:id="@id/tv_location_title"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:text="景点地理位置"
+                        android:textColor="@color/title_color"
+                        android:textSize="@dimen/text_size_mid_36pt" />
+
+                    <ImageView
+                        android:id="@id/iv_location"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:layout_alignParentTop="true"
+                        android:src="@drawable/my_location_marker" />
+                </RelativeLayout>
+
+                <EditText
+                    android:id="@id/et_address"
+                    style="@style/req_item_content_style"
+                    android:hint="请选择景点位置"
+                    android:inputType="number"
+                    android:textColor="@color/assist_color"
+                    android:textColorHint="@color/tip_color"
+                    android:textSize="@dimen/text_size_small_28pt" />
+            </LinearLayout>
+
+            <LinearLayout
+                style="@style/req_item_style"
+                android:orientation="vertical" >
+
+                <TextView
+                    android:id="@id/tv_summary_title"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:text="景点简介"
+                    android:textColor="@color/title_color"
+                    android:textSize="@dimen/text_size_mid_36pt" />
+
+                <EditText
+                    android:id="@id/et_summary"
+                    style="@style/req_item_content_style"
+                    android:hint="请填写景点简介"
+                    android:inputType="number"
+                    android:textColor="@color/assist_color"
+                    android:textColorHint="@color/tip_color"
+                    android:textSize="@dimen/text_size_small_28pt" />
+            </LinearLayout>
+
+            <LinearLayout
+                style="@style/req_item_style"
+                android:orientation="vertical" >
+
+                <TextView
+                    android:id="@id/tv_picture_title"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:text="景点照片"
+                    android:textColor="@color/title_color"
+                    android:textSize="@dimen/text_size_mid_36pt" />
+
+                <ImageView
+                    android:id="@id/iv_picture"
+                    style="@style/req_item_content_style"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/btn_add_nor_dis" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@id/ll_service_content"
+                style="@style/match_parent"
+                android:layout_marginTop="@dimen/rl_size_20px"
+                android:orientation="vertical" >
+
+                <TextView
+                    android:id="@id/tv_trip_title"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:text="说说您的行程吧(^_^)"
+                    android:textColor="@color/title_color"
+                    android:textSize="@dimen/text_size_mid_36pt" />
+
+                <EditText
+                    android:id="@id/et_trip"
+                    style="@style/req_item_content_style"
+                    android:gravity="center|left|top"
+                    android:hint="明确地表达您的行程安排，才能更好地吸引其他旅游者哦"
+                    android:imeOptions="actionNext"
+                    android:inputType="textMultiLine"
+                    android:minLines="5"
+                    android:textColor="@color/assist_color"
+                    android:textColorHint="@color/tip_color"
+                    android:textSize="@dimen/text_size_small_28pt" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@id/ll_budget_content"
+                style="@style/match_parent"
+                android:layout_marginTop="@dimen/rl_size_30px"
+                android:orientation="vertical" >
+
+                <TextView
+                    android:id="@id/tv_budget_title"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:text="每人大概预算"
+                    android:textColor="@color/title_color"
+                    android:textSize="@dimen/text_size_mid_36pt" />
+
+                <EditText
+                    android:id="@id/et_budget"
+                    style="@style/req_item_content_style"
+                    android:hint="人均预算"
+                    android:inputType="numberDecimal"
+                    android:textSize="@dimen/text_size_small_28pt" />
+            </LinearLayout>
+        </LinearLayout>
+    </ScrollView>
+
+    <TextView
+        android:id="@id/tv_save"
+        android:layout_width="fill_parent"
+        android:layout_height="55.0dip"
+        android:layout_alignParentBottom="true"
+        android:background="@drawable/ta_lib_selector_rect_btn_red"
+        android:gravity="center"
+        android:text="发布拼团信息"
+        android:textColor="@color/white"
+        android:textSize="@dimen/rl_size_40px" />
+
+</RelativeLayout>

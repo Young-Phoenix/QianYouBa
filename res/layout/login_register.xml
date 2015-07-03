@@ -1,0 +1,143 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="@drawable/login_bg22" >
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:orientation="vertical"
+        android:paddingTop="@dimen/size_60dp" >
+
+        <TextView
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:clickable="true"
+            android:gravity="center"
+            android:text="注册"
+            android:textColor="@color/white"
+            android:textSize="@dimen/text_size_big_48pt" />
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:paddingTop="@dimen/rl_size_60px" >
+
+            <LinearLayout
+                android:id="@id/ll_phone"
+                style="@style/login_edit_style"
+                android:layout_width="fill_parent"
+                android:background="@drawable/qian_edit_text"
+                android:orientation="horizontal" >
+
+                <TextView
+                    android:id="@id/et_phone_prefix"
+                    android:layout_width="50.0dip"
+                    android:layout_height="fill_parent"
+                    android:background="@drawable/qian_edit_text_prefix"
+                    android:gravity="center"
+                    android:hint="+86"
+                    android:textSize="@dimen/text_size_small_28pt" />
+
+                <EditText
+                    android:id="@id/et_username"
+                    android:layout_width="0.0dip"
+                    android:layout_height="fill_parent"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_weight="1.0"
+                    android:background="@null"
+                    android:hint="请输入手机号码"
+                    android:maxLength="11"
+                    android:phoneNumber="true"
+                    android:textColor="@color/assist_color"
+                    android:textColorHint="@color/tip_color"
+                    android:textSize="@dimen/text_size_small_28pt" />
+            </LinearLayout>
+
+            <RelativeLayout
+                android:id="@id/rl_consum_number"
+                style="@style/login_edit_style"
+                android:layout_width="fill_parent"
+                android:background="@drawable/qian_edit_text"
+                android:orientation="horizontal" >
+
+                <EditText
+                    android:id="@id/et_verify_code"
+                    android:layout_width="fill_parent"
+                    android:layout_height="fill_parent"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_marginLeft="0.0dip"
+                    android:layout_toLeftOf="@id/tv_reget_code"
+                    android:background="@drawable/qian_edit_text"
+                    android:gravity="center_vertical"
+                    android:hint="请输入验证码"
+                    android:maxLines="1" />
+
+                <TextView
+                    android:id="@id/tv_reget_code"
+                    android:layout_width="wrap_content"
+                    android:layout_height="fill_parent"
+                    android:layout_alignParentRight="true"
+                    android:layout_gravity="center|right"
+                    android:layout_margin="@dimen/rl_size_10px"
+                    android:background="#ffd1dadf"
+                    android:clickable="false"
+                    android:gravity="center_vertical"
+                    android:onClick="reSend"
+                    android:padding="5.0dip"
+                    android:text="58秒 重新发送"
+                    android:textColor="@color/assist_color"
+                    android:textSize="@dimen/text_size_smallest_26pt" />
+            </RelativeLayout>
+
+            <EditText
+                android:id="@id/et_password"
+                style="@style/login_edit_style"
+                android:layout_width="match_parent"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="@dimen/rl_size_96px"
+                android:background="@drawable/qian_bg_login_pwd"
+                android:hint="请输入密码"
+                android:inputType="textPassword"
+                android:singleLine="true"
+                android:textColor="@color/assist_color"
+                android:textColorHint="@color/tip_color"
+                android:textSize="@dimen/text_size_small_28pt" />
+
+            <EditText
+                android:id="@id/et_confirm_password"
+                style="@style/login_edit_style"
+                android:layout_width="match_parent"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="@dimen/rl_size_20px"
+                android:background="@drawable/qian_bg_login_pwd"
+                android:hint="确认密码"
+                android:inputType="textPassword"
+                android:singleLine="true"
+                android:textColor="@color/assist_color"
+                android:textColorHint="@color/tip_color"
+                android:textSize="@dimen/text_size_small_28pt" />
+        </LinearLayout>
+
+        <Button
+            android:id="@id/btn_register"
+            android:layout_width="@dimen/size_45dp"
+            android:layout_height="@dimen/size_45dp"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="@dimen/rl_size_96px"
+            android:background="@drawable/go_next_selector"/>
+    </LinearLayout>
+
+    <ImageView
+        android:id="@id/iv_close_button"
+        android:layout_width="@dimen/rl_size_40px"
+        android:layout_height="@dimen/rl_size_40px"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginRight="@dimen/rl_size_60px"
+        android:layout_marginTop="@dimen/rl_size_60px"
+        android:background="@drawable/close_icon_x" />
+
+</RelativeLayout>

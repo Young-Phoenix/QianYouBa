@@ -1,0 +1,345 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <include
+        android:id="@id/custom_title"
+        layout="@layout/custom_title_other" />
+
+    <ScrollView
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_above="@id/pay_bottom"
+        android:layout_below="@id/custom_title"
+            android:scrollbars="none">
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical" >
+
+            <ImageView
+                android:id="@id/iv_item"
+                android:layout_width="fill_parent"
+                android:layout_height="@dimen/rl_size_485px"
+                android:layout_marginTop="0.0dip"
+                android:scaleType="centerCrop" />
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:padding="@dimen/rl_size_30px" >
+
+                <TextView
+                    android:id="@id/tv_title"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:text="行走天涯海角，看那潮起潮落"
+                    android:textColor="@color/title_color"
+                    android:textSize="@dimen/text_size_mid_36pt" />
+
+                <RelativeLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5.0dip" >
+
+                    <ImageView
+                        android:id="@id/iv_location"
+                        android:layout_width="@dimen/distance_20px"
+                        android:layout_height="@dimen/distance_20px"
+                        android:layout_centerVertical="true"
+                        android:src="@drawable/ic_location" />
+
+                    <TextView
+                        android:id="@id/tv_location_title"
+                        style="@style/product_detail_gray_text"
+                        android:layout_toRightOf="@id/iv_location"
+                        android:text="游玩地点:"
+                        android:textColor="@color/assist_color"
+                        android:textSize="@dimen/text_size_small_28pt" />
+
+                    <TextView
+                        android:id="@id/tv_location"
+                        style="@style/product_detail_gray_text"
+                        android:layout_toRightOf="@id/tv_location_title"
+                        android:text="阿尔巴尼亚"
+                        android:textColor="@color/assist_color"
+                        android:textSize="@dimen/text_size_small_28pt" />
+                </RelativeLayout>
+
+                <TextView
+                    android:id="@id/tv_content"
+                    style="@style/product_detail_gray_text"
+                    android:layout_marginBottom="@dimen/distance_10px"
+                    android:layout_marginTop="@dimen/distance_20px"
+                    android:layout_toRightOf="@id/tv_time_title"
+                    android:lineSpacingExtra="@dimen/distance_10px"
+                    android:text="地处法国“蔚蓝海岸地区”的戛纳无疑是世界级的旅游与度假胜地。与该地区大部分鹅卵石海滩不同，戛纳湾一片细沙。沿海滩可见一排排棕榈树、一片片高级酒店、公寓及各种顶级奢侈品商店，码头停满豪华游艇。"
+                    android:textColor="@color/assist_color"
+                    android:textSize="@dimen/text_size_small_28pt" />
+
+                <RelativeLayout
+                    android:id="@id/rl_people_count"
+                    android:layout_width="fill_parent"
+                    android:layout_height="40.0dip"
+                    android:layout_marginTop="@dimen/distance_20px"
+                    android:clickable="true"
+                    android:visibility="gone" >
+
+                    <TextView
+                        android:id="@id/tv_suitable_person"
+                        style="@style/product_detail_gray_text"
+                        android:layout_centerVertical="true"
+                        android:layout_gravity="center_vertical"
+                        android:text="适宜人数"
+                        android:textColor="@color/assist_color"
+                        android:textSize="@dimen/text_size_small_28pt" />
+
+                    <TextView
+                        android:id="@id/tv_suitable_people_num"
+                        style="@style/product_detail_gray_text"
+                        android:layout_alignParentRight="true"
+                        android:layout_centerVertical="true"
+                        android:layout_toRightOf="@id/tv_suitable_person"
+                        android:gravity="right"
+                        android:text="2-7人"
+                        android:textColor="@color/title_color"
+                        android:textSize="@dimen/text_size_small_28pt" />
+                </RelativeLayout>
+
+                <TextView
+                    android:layout_width="fill_parent"
+                    android:layout_height="2.0px"
+                    android:background="@color/glay_line_color"
+                    android:visibility="gone" />
+
+                <RelativeLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="@dimen/size_40dp"
+                    android:clickable="true" >
+
+                    <TextView
+                        android:id="@id/tv_suitable_group"
+                        style="@style/product_detail_gray_text"
+                        android:layout_centerVertical="true"
+                        android:layout_gravity="center_vertical"
+                        android:text="适宜人群"
+                        android:textColor="@color/assist_color"
+                        android:textSize="@dimen/text_size_small_28pt" />
+
+                    <TextView
+                        android:id="@id/tv_suitable_group"
+                        style="@style/product_detail_gray_text"
+                        android:layout_alignParentRight="true"
+                        android:layout_centerVertical="true"
+                        android:layout_toRightOf="@id/tv_suitable_group"
+                        android:gravity="right"
+                        android:text="青壮年"
+                        android:textColor="@color/title_color"
+                        android:textSize="@dimen/text_size_small_28pt" />
+                </RelativeLayout>
+
+                <TextView
+                    android:layout_width="fill_parent"
+                    android:layout_height="2.0px"
+                    android:background="@color/glay_line_color" />
+
+                <RelativeLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="@dimen/size_40dp"
+                    android:clickable="true" >
+
+                    <TextView
+                        android:id="@id/tv_suitable_season"
+                        style="@style/product_detail_gray_text"
+                        android:layout_centerVertical="true"
+                        android:layout_gravity="center_vertical"
+                        android:text="适宜季节"
+                        android:textColor="@color/assist_color"
+                        android:textSize="@dimen/text_size_small_28pt" />
+
+                    <TextView
+                        android:id="@id/tv_suitable_season"
+                        style="@style/product_detail_gray_text"
+                        android:layout_alignParentRight="true"
+                        android:layout_centerVertical="true"
+                        android:layout_toRightOf="@id/tv_suitable_season"
+                        android:gravity="right"
+                        android:text="春/夏"
+                        android:textColor="@color/title_color"
+                        android:textSize="@dimen/text_size_small_28pt" />
+                </RelativeLayout>
+
+                <TextView
+                    android:layout_width="fill_parent"
+                    android:layout_height="2.0px"
+                    android:background="@color/glay_line_color" />
+
+                <RelativeLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="@dimen/size_40dp"
+                    android:clickable="true" >
+
+                    <TextView
+                        android:id="@id/tv_suitable_duration"
+                        style="@style/product_detail_gray_text"
+                        android:layout_centerVertical="true"
+                        android:layout_gravity="center_vertical"
+                        android:text="行程耗时"
+                        android:textColor="@color/assist_color"
+                        android:textSize="@dimen/text_size_small_28pt" />
+
+                    <TextView
+                        android:id="@id/tv_suitable_duration"
+                        style="@style/product_detail_gray_text"
+                        android:layout_alignParentRight="true"
+                        android:layout_centerVertical="true"
+                        android:layout_toRightOf="@id/tv_suitable_duration"
+                        android:gravity="right"
+                        android:text="7天以内"
+                        android:textColor="@color/title_color"
+                        android:textSize="@dimen/text_size_small_28pt" />
+                </RelativeLayout>
+
+                <TextView
+                    android:layout_width="fill_parent"
+                    android:layout_height="2.0px"
+                    android:background="@color/glay_line_color" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@id/ll_item_container"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical" />
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:padding="@dimen/distance_30px" >
+
+                <RelativeLayout
+                    android:id="@id/rl_people_count"
+                    android:layout_width="fill_parent"
+                    android:layout_height="40.0dip"
+                    android:layout_marginTop="@dimen/distance_20px"
+                    android:clickable="true" >
+
+                    <TextView
+                        android:id="@id/tv_need_know_ic"
+                        android:layout_width="5.0dip"
+                        android:layout_height="fill_parent"
+                        android:layout_centerVertical="true"
+                        android:layout_gravity="center_vertical"
+                        android:background="@drawable/pink_red" />
+
+                    <TextView
+                        android:id="@id/tv_need_know_title"
+                        style="@style/product_detail_gray_text"
+                        android:layout_centerVertical="true"
+                        android:layout_gravity="center_vertical"
+                        android:layout_marginLeft="3.0dip"
+                        android:layout_toRightOf="@id/tv_need_know_ic"
+                        android:text="购买须知"
+                        android:textColor="@color/global_black_light"
+                        android:textSize="@dimen/text_size_mid_36pt" />
+
+                    <TextView
+                        android:id="@id/tv_need_know_notice"
+                        style="@style/product_detail_gray_text"
+                        android:layout_centerVertical="true"
+                        android:layout_toRightOf="@id/tv_need_know_title"
+                        android:text="(此行程每位200元，限2-7人)"
+                        android:textColor="@color/pink_red" />
+                </RelativeLayout>
+
+                <TextView
+                    android:id="@id/tv_time"
+                    style="@style/product_detail_gray_text"
+                    android:layout_marginTop="@dimen/distance_10px"
+                    android:layout_toRightOf="@id/tv_time_title"
+                    android:text="地处法国“蔚蓝海岸地区”的戛纳无疑是世界级的旅游与度假胜地。与该地区大部分鹅卵石海滩不同，戛纳湾一片细沙。沿海滩可见一排排棕榈树、一片片高级酒店、公寓及各种顶级奢侈品商店，码头停满豪华游艇。" />
+
+                <RelativeLayout
+                    android:id="@id/rl_people_count2"
+                    android:layout_width="fill_parent"
+                    android:layout_height="40.0dip"
+                    android:layout_marginTop="@dimen/distance_30px"
+                    android:clickable="true" >
+
+                    <TextView
+                        android:id="@id/tv_need_know_ic2"
+                        android:layout_width="5.0dip"
+                        android:layout_height="fill_parent"
+                        android:layout_centerVertical="true"
+                        android:layout_gravity="center_vertical"
+                        android:background="@drawable/pink_red" />
+
+                    <TextView
+                        android:id="@id/tv_need_know_title2"
+                        style="@style/product_detail_gray_text"
+                        android:layout_centerVertical="true"
+                        android:layout_gravity="center_vertical"
+                        android:layout_marginLeft="3.0dip"
+                        android:layout_toRightOf="@id/tv_need_know_ic2"
+                        android:text="游客所需携带的物品"
+                        android:textColor="@color/global_black_light"
+                        android:textSize="@dimen/text_size_mid_36pt" />
+                </RelativeLayout>
+
+                <TextView
+                    android:id="@id/tv_time3"
+                    style="@style/product_detail_gray_text"
+                    android:layout_marginTop="@dimen/distance_10px"
+                    android:layout_toRightOf="@id/tv_time_title"
+                    android:text="地处法国“蔚蓝海岸地区”的戛纳无疑是世界级的旅游与度假胜地。与该地区大部分鹅卵石海滩不同，戛纳湾一片细沙。沿海滩可见一排排棕榈树、一片片高级酒店、公寓及各种顶级奢侈品商店，码头停满豪华游艇。" />
+
+                <RelativeLayout
+                    android:id="@id/rl_people_count3"
+                    android:layout_width="fill_parent"
+                    android:layout_height="40.0dip"
+                    android:layout_marginTop="@dimen/distance_30px"
+                    android:clickable="true" >
+
+                    <TextView
+                        android:id="@id/tv_need_know_ic3"
+                        android:layout_width="5.0dip"
+                        android:layout_height="fill_parent"
+                        android:layout_centerVertical="true"
+                        android:layout_gravity="center_vertical"
+                        android:background="@drawable/pink_red" />
+
+                    <TextView
+                        android:id="@id/tv_need_know_title3"
+                        style="@style/product_detail_gray_text"
+                        android:layout_centerVertical="true"
+                        android:layout_gravity="center_vertical"
+                        android:layout_marginLeft="3.0dip"
+                        android:layout_toRightOf="@id/tv_need_know_ic3"
+                        android:text="通哥/通姐所需携带的物品"
+                        android:textColor="@color/global_black_light"
+                        android:textSize="@dimen/text_size_mid_36pt" />
+                </RelativeLayout>
+
+                <TextView
+                    android:id="@id/tv_time4"
+                    style="@style/product_detail_gray_text"
+                    android:layout_marginTop="@dimen/distance_10px"
+                    android:layout_toRightOf="@id/tv_time_title"
+                    android:text="地处法国“蔚蓝海岸地区”的戛纳无疑是世界级的旅游与度假胜地。与该地区大部分鹅卵石海滩不同，戛纳湾一片细沙。沿海滩可见一排排棕榈树、一片片高级酒店、公寓及各种顶级奢侈品商店，码头停满豪华游艇。" />
+            </LinearLayout>
+        </LinearLayout>
+    </ScrollView>
+
+    <include
+        android:id="@id/pay_bottom"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        layout="@layout/ta_cmn_product_buy_btn" />
+
+</RelativeLayout>

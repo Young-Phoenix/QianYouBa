@@ -1,0 +1,227 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:custom_lib="http://schemas.android.com/apk/res-auto"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent" 
+    android:background="@drawable/white">
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:baselineAligned="false"
+        android:orientation="vertical"
+        android:paddingBottom="@dimen/distance_30px" >
+
+        <View
+            android:layout_width="fill_parent"
+            android:layout_height="0.5dip"
+            android:background="#ffdcdcdc" />
+
+        <RelativeLayout
+            android:id="@id/rl_personal_center_part"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="@dimen/rl_size_40px"
+            android:visibility="visible" >
+
+            <RelativeLayout
+                android:id="@id/rl_iv_ic"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10.0sp" >
+
+                <ImageView
+                    android:id="@id/iv_photo"
+                    android:layout_width="75.0sp"
+                    android:layout_height="75.0sp"
+                    android:layout_centerInParent="true"
+                    android:layout_gravity="center"
+                    android:gravity="center"
+                    android:src="@drawable/default_head_photo" />
+            </RelativeLayout>
+
+            <TextView
+                android:id="@id/tv_traveller_center_uname"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/rl_iv_ic"
+                android:layout_gravity="center"
+                android:layout_marginTop="@dimen/rl_size_26px"
+                android:gravity="center_horizontal"
+                android:text="登录"
+                android:textColor="#ff323944"
+                android:textSize="@dimen/text_size_mid_36pt" />
+
+            <TextView
+                android:id="@id/tv_traveller_center_introduce"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/tv_traveller_center_uname"
+                android:layout_gravity="center"
+                android:layout_marginTop="@dimen/rl_size_30px"
+                android:lineSpacingExtra="2.0dip"
+                android:text=""
+                android:textColor="@color/assist_color"
+                android:textSize="@dimen/text_size_small_28pt" />
+
+            <RelativeLayout
+                android:id="@id/rl_traveller_profile_update"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:padding="@dimen/rl_size_10px" >
+
+                <ImageView
+                    android:id="@id/iv_icon_update"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:src="@drawable/icon_update_info" />
+            </RelativeLayout>
+        </RelativeLayout>
+
+        <LinearLayout
+            android:id="@id/ll_manage_part"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical" >
+
+            <View
+                android:layout_width="fill_parent"
+                android:layout_height="0.5dip"
+                android:background="@color/glay_line_color" />
+
+            <RelativeLayout
+                android:id="@id/rl_order_manage"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/ta_lib_selector_item_bg"
+                android:clickable="true"
+                android:paddingLeft="@dimen/rl_size_40px"
+                android:paddingRight="@dimen/rl_size_40px" >
+
+                <TextView
+                    style="@style/imMeListLeft"
+                    android:gravity="center_vertical"
+                    android:text="订单管理"
+                    android:textColor="@color/title_color" />
+
+                <TextView
+                    android:layout_width="@dimen/rl_size_30px"
+                    android:layout_height="@dimen/rl_size_40px"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:background="@drawable/ic_next" />
+            </RelativeLayout>
+
+            <View
+                android:layout_width="fill_parent"
+                android:layout_height="0.5dip"
+                android:background="@color/glay_line_color" />
+
+
+
+            <RelativeLayout
+                android:id="@id/rl_my_group"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/ta_lib_selector_item_bg"
+                android:clickable="true"
+                android:paddingLeft="@dimen/rl_size_40px"
+                android:paddingRight="@dimen/rl_size_40px" >
+
+                <TextView
+                    style="@style/imMeListLeft"
+                    android:text="我的拼团"
+                    android:textColor="@color/title_color" />
+
+                <TextView
+                    android:layout_width="@dimen/rl_size_30px"
+                    android:layout_height="@dimen/rl_size_40px"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:background="@drawable/ic_next" />
+            </RelativeLayout>
+
+            <View
+                android:layout_width="fill_parent"
+                android:layout_height="0.5dip"
+                android:background="@color/glay_line_color" />
+            <RelativeLayout
+                    android:id="@id/rl_hand_in_hand"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/ta_lib_selector_item_bg"
+                    android:clickable="true"
+                    android:paddingLeft="@dimen/rl_size_40px"
+                    android:paddingRight="@dimen/rl_size_40px" >
+
+                <TextView
+                        style="@style/imMeListLeft"
+                        android:text="求牵手"
+                        android:textColor="@color/title_color" />
+
+                <TextView
+                        android:layout_width="@dimen/rl_size_30px"
+                        android:layout_height="@dimen/rl_size_40px"
+                        android:layout_alignParentRight="true"
+                        android:layout_centerVertical="true"
+                        android:background="@drawable/ic_next" />
+            </RelativeLayout>
+
+            <View
+                    android:layout_width="fill_parent"
+                    android:layout_height="0.5dip"
+                    android:background="@color/glay_line_color" />
+            <RelativeLayout
+                android:id="@id/rl_about_qianyouba"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/ta_lib_selector_item_bg"
+                android:clickable="true"
+                android:paddingLeft="@dimen/rl_size_40px"
+                android:paddingRight="@dimen/rl_size_40px" >
+
+                <TextView
+                    style="@style/imMeListLeft"
+                    android:text="关于牵游吧"
+                    android:textColor="@color/title_color" />
+
+                <TextView
+                    android:layout_width="@dimen/rl_size_30px"
+                    android:layout_height="@dimen/rl_size_40px"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:background="@drawable/ic_next" />
+            </RelativeLayout>
+
+            <View
+                android:layout_width="fill_parent"
+                android:layout_height="0.5dip"
+                android:background="@color/glay_line_color" />
+
+            <RelativeLayout
+                android:id="@id/rl_logout"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/ta_lib_selector_item_bg"
+                android:clickable="true"
+                android:paddingLeft="@dimen/rl_size_40px"
+                android:paddingRight="@dimen/rl_size_40px"
+                android:textColor="@color/title_color" >
+
+                <TextView
+                    style="@style/imMeListLeft"
+                    android:text="退出"
+                    android:textColor="@color/title_color" />
+            </RelativeLayout>
+
+            <View
+                android:layout_width="fill_parent"
+                android:layout_height="0.5dip"
+                android:background="@color/glay_line_color" />
+        </LinearLayout>
+    </LinearLayout>
+
+</ScrollView>

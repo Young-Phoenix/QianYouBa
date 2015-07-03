@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="45dp"
+    android:background="@drawable/tt_top_default_bk"
+    android:orientation="horizontal"
+    android:paddingLeft="@dimen/rl_size_20px"
+    android:paddingRight="@dimen/rl_size_20px" >
+
+    <RelativeLayout
+        android:id="@id/rl_title"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_gravity="center"
+        android:orientation="horizontal"
+        android:visibility="gone" >
+
+        <Button
+            android:id="@id/btn_back"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_centerVertical="true"
+            android:layout_gravity="center_vertical"
+            android:background="@drawable/tt_top_back" />
+
+        <TextView
+            android:id="@id/tv_title"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_centerHorizontal="true"
+            android:gravity="center"
+            android:text="拼团"
+            android:textColor="@color/default_blue_color"
+            android:textSize="@dimen/text_size_big_48pt" />
+
+        <Button
+            android:id="@id/btn_add_group"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_gravity="center_vertical"
+            android:background="@drawable/qian_add_group" />
+    </RelativeLayout>
+
+    <LinearLayout
+        android:id="@id/ll_search"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:baselineAligned="false"
+        android:orientation="horizontal"
+        android:visibility="visible" >
+
+        <RelativeLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:layout_weight="8" >
+
+            <EditText
+                android:id="@id/et_search_content"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:background="@drawable/home_search_input_bg"
+                android:drawableLeft="@drawable/tt_top_search"
+                android:hint="@string/home_search_hint"
+                android:textSize="12sp" />
+
+            <Button
+                android:id="@id/btn_close"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignRight="@id/et_search_content"
+                android:layout_centerVertical="true"
+                android:layout_marginRight="@dimen/rl_size_10px"
+                android:background="@drawable/close_selector"
+                android:textColor="@color/white"
+                android:textSize="12sp"
+                android:visibility="gone" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:layout_weight="2" >
+
+            <Button
+                android:id="@id/btn_search"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/distance_10dp"
+                android:background="@drawable/search_btn_selector"
+                android:paddingBottom="@dimen/distance_10dp"
+                android:paddingLeft="@dimen/distance_15dp"
+                android:paddingRight="@dimen/distance_15dp"
+                android:paddingTop="@dimen/distance_10dp"
+                android:text="@string/home_search"
+                android:textColor="@color/white"
+                android:textSize="14sp"
+                android:visibility="gone" />
+
+            <Button
+                android:id="@id/btn_switch"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:background="@drawable/more_selector"
+                android:visibility="visible" />
+        </RelativeLayout>
+    </LinearLayout>
+
+</LinearLayout>

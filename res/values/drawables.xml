@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <item type="drawable" name="pink_light">#ffffcccc</item>
+    <item type="drawable" name="standard_black">#ff527394</item>
+    <item type="drawable" name="pink_red_light">#ffffcccc</item>
+    <item type="drawable" name="pink_red">#e5f84450</item>
+    <item type="drawable" name="pink_red_press">#fff84450</item>
+    <item type="drawable" name="common_gray_slight">#ffcccccc</item>
+    <item type="drawable" name="common_transparent">#00111111</item>
+    <item type="drawable" name="white">#ffffffff</item>
+    <item type="drawable" name="item_press_bg">#ffcccccc</item>
+    <item type="drawable" name="transparent_background">#00111111</item>
+    <item type="drawable" name="half_red">#99f84454</item>
+    <item type="drawable" name="half_red_press">#abf84454</item>
+    <item type="drawable" name="comments_bg_press">#ffcdcdcd</item>
+</resources>

@@ -1,0 +1,15 @@
+<component name="libraryTable">
+  <library name="libs1">
+    <CLASSES>
+      <root url="jar://D:/9GAG-master/app/libs/volley.jar!/" />
+      <root url="jar://D:/9GAG-master/app/libs/universal-image-loader-1.9.1.jar!/" />
+      <root url="jar://D:/9GAG-master/app/libs/gson-2.2.4.jar!/" />
+      <root url="jar://D:/9GAG-master/app/libs/nineoldandroids-2.4.0.jar!/" />
+      <root url="jar://D:/9GAG-master/app/libs/photoviewlibrary.jar!/" />
+      <root url="jar://D:/9GAG-master/app/libs/butterknife-5.0.0.jar!/" />
+      <root url="jar://D:/9GAG-master/app/libs/listviewanimations-2.6.0.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>
