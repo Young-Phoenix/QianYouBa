@@ -6,7 +6,11 @@ import android.app.Dialog;
 import android.os.Bundle;
 import android.support.v4.app.FragmentTransaction;
 
+import com.fasterxml.jackson.core.type.TypeReference;
 import com.qianyouba.R;
+import com.qianyouba.application.App;
+import com.qianyouba.entity.Message;
+import com.qianyouba.entity.User;
 import com.qianyouba.fragment.BaseFragment.OnClickInnerListener;
 import com.qianyouba.fragment.ForgetPasswordFragment;
 import com.qianyouba.fragment.LoginFragment;
@@ -14,6 +18,7 @@ import com.qianyouba.fragment.RegisterFragment;
 import com.qianyouba.http.HttpRequestUtil;
 import com.qianyouba.http.HttpRequestUtil.HttpRequestListener;
 import com.qianyouba.http.RequestUri;
+import com.qianyouba.json.MessageJson;
 import com.qinyouba.uitls.Constants;
 import com.qinyouba.uitls.DialogUtil;
 import com.qinyouba.uitls.L;
@@ -101,6 +106,17 @@ public class LoginAc extends BaseActivity implements OnClickInnerListener,
 		switch (requestCode) {
 		case Constants.LOGIN_REQUEST:
 			L.e(TAG,data);
+			//在此处解析返回的data
+			
+			MessageJson<User> jsonUtil = new MessageJson<User>();
+			Message<User> msg = jsonUtil.json2Obj(data,new TypeReference<Message<User>>(){});
+			switch(msg.getResultCode()){
+			case 200:
+				((App)getApplication()).user = msg.getData();
+				break;
+			case 400:
+				break;
+			}
 			break;
 		case Constants.REGISTER_REQUEST:
 			break;

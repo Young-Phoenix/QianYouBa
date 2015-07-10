@@ -60,9 +60,9 @@ public class MeFragment extends BaseFragment implements View.OnClickListener {
         App app = (App) getActivity().getApplication();
 
         if (app.user != null) {
-            username_or_login.setText(app.user.getNickName());
+            username_or_login.setText(app.user.getUsername());
             //如果roleStatus为1，则用户已认证
-            if (app.user.getRoleStatus() == USER_AUTH) {
+            if (app.user.getUserState() == USER_AUTH) {
                 user_flag = USER_EDIT;
             } else {
                 user_flag = USER_AUTH;
